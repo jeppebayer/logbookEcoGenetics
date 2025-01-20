@@ -263,30 +263,30 @@ The following awk script has been used to create 'GCA_905147175.2_ilAglUrti1.2_g
 
 ```awk
 awk \
-	'BEGIN{
-		FS = "\t"
-		OFS = "\t"
-	}
-	{
-		if ($0 ~ /^>/)
-		{
-			n = split($1, namearray, " ")
-			chromname[namearray[n]]=substr(namearray[1], 2, length(namearray[1]))
-		}
-		if (FNR == NR)
-		{
-			next
-		}
-		if ($0 ~ /^#/)
-		{
-			print $0; next
-		}
-		$1 = chromname[$1]
-		print $0
-	}' \
-	GCA_905147175.2_ilAglUrti1.2_genomic.fna \
-	Nymphalis_urticae-GCA_905147175.2-2022_03-genes.gtf \
-	> GCA_905147175.2_ilAglUrti1.2_genomic.gtf
+    'BEGIN{
+        FS = "\t"
+        OFS = "\t"
+    }
+    {
+        if ($0 ~ /^>/)
+        {
+            n = split($1, namearray, " ")
+            chromname[namearray[n]]=substr(namearray[1], 2, length(namearray[1]))
+        }
+        if (FNR == NR)
+        {
+            next
+        }
+        if ($0 ~ /^#/)
+        {
+            print $0; next
+        }
+        $1 = chromname[$1]
+        print $0
+    }' \
+    GCA_905147175.2_ilAglUrti1.2_genomic.fna \
+    Nymphalis_urticae-GCA_905147175.2-2022_03-genes.gtf \
+    > GCA_905147175.2_ilAglUrti1.2_genomic.gtf
 ```
 
 Though this GTF annotation should be compatible with the FNA sequence file, do note that there is no annotation matching the chromosomes 'CAJHUP020000001.1' and 'CAJHUP020000002.1'.
