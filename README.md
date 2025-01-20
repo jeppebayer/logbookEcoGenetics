@@ -5,3 +5,4 @@ The intention of these pages is to create a more centralised collection of infor
 ## Sections
 
 [Genomes](./genomes.md): Contains information about what genomic data is available for different species and potential notes about these. There is also listing several conventions used for structuring.
+[Tasks](./tasks.md): List of tasked to be completed by me.

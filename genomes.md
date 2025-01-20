@@ -1,57 +1,91 @@
 # Genomes
 
+- [Genomes](#genomes)
+	- [Genome Data Overview](#genome-data-overview)
+	- [Genome File Naming Convention](#genome-file-naming-convention)
+	- [Genome Folder Structure](#genome-folder-structure)
+	- [Genome File Paths](#genome-file-paths)
+		- [Aglais urticae genome file](#aglais-urticae-genome-file)
+		- [Coenonympha tullia genome file](#coenonympha-tullia-genome-file)
+		- [Enchytraeus albidus genome file](#enchytraeus-albidus-genome-file)
+		- [Entomobrya nicoleti genome file](#entomobrya-nicoleti-genome-file)
+		- [Eulampis jugularis genome file](#eulampis-jugularis-genome-file)
+		- [Gonepteryx rhamni genome file](#gonepteryx-rhamni-genome-file)
+		- [Heliconia bihai genome file](#heliconia-bihai-genome-file)
+		- [Heliconia caribea genome file](#heliconia-caribea-genome-file)
+		- [Hipparchia semele genome file](#hipparchia-semele-genome-file)
+		- [Isotoma viridis genome file](#isotoma-viridis-genome-file)
+		- [Lepidocyrtus lignorum genome file](#lepidocyrtus-lignorum-genome-file)
+		- [Lycaena hippothoe genome file](#lycaena-hippothoe-genome-file)
+		- [Lycaena phlaeas genome file](#lycaena-phlaeas-genome-file)
+		- [Lycaena virgaureae genome file](#lycaena-virgaureae-genome-file)
+		- [Maniola jurtina genome file](#maniola-jurtina-genome-file)
+		- [Orchesella cincta genome file](#orchesella-cincta-genome-file)
+		- [Orchesella flavescens genome file](#orchesella-flavescens-genome-file)
+		- [Orchesella villosa genome file](#orchesella-villosa-genome-file)
+		- [Parnassius mnemosyne genome file](#parnassius-mnemosyne-genome-file)
+		- [Pieris napi genome file](#pieris-napi-genome-file)
+		- [Pogonognathellus flavescens genome file](#pogonognathellus-flavescens-genome-file)
+		- [Sitona lineatus genome file](#sitona-lineatus-genome-file)
+		- [Thymelicus acteon genome file](#thymelicus-acteon-genome-file)
+		- [Thymelicus lineola genome file](#thymelicus-lineola-genome-file)
+	- [Expanded Notes](#expanded-notes)
+		- [Aglais urticae Expanded Notes](#aglais-urticae-expanded-notes)
+
 ## Genome Data Overview
 
 | Species | Group | File | Source | Data Type | Project | Re-sequencing Data | PacBio HiFi Data | Hi-C Data | RNA Data | hifiasm | Hi-C scaffolding | RepeatMasking | Gene Annotation | Annotation Files | Comments | Edit Date |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | *Aglais urticae* | Butterfly | [GCA_905147175.2_ilAglUrti1.2_genomic.fna](#aglais-urticae-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_905147175.2/) | individual; female | Museomics; Denmark | Y | NA | NA | NA | NA | NA | NA | NA | genes.bed; gtf; integenic.bed | The annotation file has been downloaded from [DToL *Nymphalis urticae*](https://portal.darwintreeoflife.org/data/root/details/Nymphalis%20urticae). [Futher notes](#aglais-urticae-expanded-notes) | 16/01-2025 |
-| *Apion fulvipes* | Beetle | none | NA |  | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
-| *Apion virens* | Beetles | none | NA |  | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
-| *Bathyphantes gracilis* | Spider | none | NA |  | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
-| *Coenonympha arcania* | Butterfly | NA | NA | NA |  | NA |  | NA | NA | NA | NA | NA | NA | NA | /faststorage/project/EcoGenetics/BACKUP/museomics/reference_genomes/Coenonympha_arcania contains random assortment of annotation files; owner jilong | 16/01-2025 |
+| *Apion fulvipes* | Beetle | none | NA | pooled; males + females | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
+| *Apion virens* | Beetles | none | NA | pooled; males + females | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
+| *Bathyphantes gracilis* | Spider | none | NA | pooled; males + females | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
+| *Coenonympha arcania* | Butterfly | NA | NA | NA | NA | NA | N | NA | NA | NA | NA | NA | NA | NA | /faststorage/project/EcoGenetics/BACKUP/museomics/reference_genomes/Coenonympha_arcania contains random assortment of annotation files; owner jilong | 16/01-2025 |
 | *Coenonympha pamphilius* | Butterfly | none | NA | individual; unknown | Museomics; Finland | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
-| *Coenonympha tullia* | Butterfly | [EG_CoeTul_15102024_genomic.fna](#coenonympha-tullia-genome-file) | EG; jepe | individual; unknown | Museomics; Denmark | Y | Y | Y | Y |  |  |  |  | gff3; genes.bed; intergenic.bed; repeats.bed | Assembly has not been done by me; jepe. Annotation files are not named according to [convention](#genome-file-naming-convention); owner b960499 | 16/01-2025 |
+| *Coenonympha tullia* | Butterfly | [EG_CoeTul_15102024_genomic.fna](#coenonympha-tullia-genome-file); [Stats](./assemblyStatistics/coenonymphaTullia.md) | EG; jepe | individual; unknown | Museomics; Denmark | Y | Y | Y | Y |  |  |  |  | gff3; genes.bed; intergenic.bed; repeats.bed | Assembly has not been done by me; jepe. Annotation files are not named according to [convention](#genome-file-naming-convention); owner b960499 | 16/01-2025 |
 | *Enchytraeus albidus* | Annelid | [EncAlb_19032024_genomic.fna](#enchytraeus-albidus-genome-file) | EG; jepe |  | Enchytraeus albidus | Y | Y | N | Y | Y | N | Y | Y | genes.bed; gtf | The originally received data files are located here /faststorage/project/EcoGenetics/people/Jeppe_Bayer/enchytraeus_albidus/data; 8k_q20 purge-dupped thrice has been chosen as the best option for a reference genome. RNA files are just named 'Orme'. With the annotation files there is also 2 .fas files; owner b960499 | 20/01-2025 |
 | *Enoplognatha ovata* | Spider | none | NA |  | PopGen | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
 | *Entomobrya multifasciata* | Collembola | none | NA | NA | PopGen | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
-| *Entomobrya nicoleti* | Collembola | [EG_EntNic_05092024_genomic.fna](#entomobrya-nicoleti-genome-file) | EG; jepe | pooled; male + female | PopGen; Genetic Load | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER2 | bundle.bed; genes.bed; gtf; intergenic.bed; repeats.bed | Large number of BUSCO genes contained within debris; debris contatenated to single bundled super-scaffold. Insufficient RNA data for gene annotation instead gene annotation was done using the protein sequences of Orchesella cincta as reference; [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/) | 20/01-2025 |
+| *Entomobrya nicoleti* | Collembola | [EG_EntNic_05092024_genomic.fna](#entomobrya-nicoleti-genome-file); [Stats](./assemblyStatistics/entomobryaNicoleti.md) | EG; jepe | pooled; male + female | PopGen; Genetic Load | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER2 | bundle.bed; genes.bed; gtf; intergenic.bed; repeats.bed | Large number of BUSCO genes contained within debris; debris contatenated to single bundled super-scaffold. Insufficient RNA data for gene annotation instead gene annotation was done using the protein sequences of Orchesella cincta as reference; [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/) | 20/01-2025 |
 | *Entomobrya nivalis* | Collembola | none | NA | NA | PopGen | Y | N | N | N | N | N | N | N | none | Re-sequencing data used as outgroup for Entomobrya nicoleti | 20/01-2025 |
 | *Erigone atra* | Spider | none | NA |  | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
 | *Eulampis jugularis* | Hummingbird | [D2212160079.fasta](#eulampis-jugularis-genome-file) |  |  | Hummingbird |  | N | N | N | NA | NA | NA | NA | none |  | 20/01-2025 |
-| *Gonepteryx rhamni* | Butterfly | [EG_GonRha_22032024_genomic.fna](#gonepteryx-rhamni-genome-file) | EG; jepe | individual; unknown | Museomics; Denmark | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER1 | genes.bed; gtf; intergenic.bed; repeats.bed | An index file Gonepteryx_rhamni/EG_GonRha_22032024_genomic.fna.fai and a neutral BED file EG_GonRha_22032024_genomic.neutral.bed have erroneously been added; owner anneaa. RNA data file have been named using the species Danish name 'citronsommerfugl', though it is misspelled as 'citronsommerfug', this naming is an inconsistency | 16/01-2025 |
+| *Gonepteryx rhamni* | Butterfly | [EG_GonRha_22032024_genomic.fna](#gonepteryx-rhamni-genome-file); [Stats](./assemblyStatistics/gonepteryxRhamni.md) | EG; jepe | individual; unknown | Museomics; Denmark | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER1 | genes.bed; gtf; intergenic.bed; repeats.bed | An index file Gonepteryx_rhamni/EG_GonRha_22032024_genomic.fna.fai and a neutral BED file EG_GonRha_22032024_genomic.neutral.bed have erroneously been added; owner anneaa. RNA data file have been named using the species Danish name 'citronsommerfugl', though it is misspelled as 'citronsommerfug', this naming is an inconsistency | 16/01-2025 |
 | *Heliconia bihai* | Hummingbird | [H_bihai.fasta](#heliconia-bihai-genome-file) |  |  | Hummingbird |  | Y | N | N | NA | NA | NA | NA | none |  | 20/01-2025 |
 | *Heliconia caribea* | Hummingbird | [H_caribea.fasta](#heliconia-caribea-genome-file) |  |  | Hummingbird |  | Y | N | N | NA | NA | NA | NA | none |  | 20/01-2025 |
 | *Hipparchia semele* | Butterfly | [GCA_933228805.2_ilHipSeme1.2_genomic.fna](#hipparchia-semele-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_933228805.2/) | individual; female | Museomics; Finland | Y | NA | NA | NA | NA | NA | NA | NA | gbff |  | 17/01-2025 |
-| *Isotoma viridis* | Collembola | [EG_IsoVir_23082024_genomic.fna](#isotoma-viridis-genome-file) | EG; jepe | pooled; male + female | PopGen; Genetic Load | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER3 | bundle.bed; genes.bed; gtf; intergenic.bed; repeats.bed | Large number of BUSCO genes contained within debris; debris contatenated to single bundled super-scaffold. Gene annotation was supplemented using the protein sequences of Orchesella cincta as reference; [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/) | 20/01-2025 |
+| *Isotoma viridis* | Collembola | [EG_IsoVir_23082024_genomic.fna](#isotoma-viridis-genome-file); [Stats](./assemblyStatistics/isotomaViridis.md) | EG; jepe | pooled; male + female | PopGen; Genetic Load | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER3 | bundle.bed; genes.bed; gtf; intergenic.bed; repeats.bed | Large number of BUSCO genes contained within debris; debris contatenated to single bundled super-scaffold. Gene annotation was supplemented using the protein sequences of Orchesella cincta as reference; [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/) | 20/01-2025 |
 | *Isotomurus maculatus* | Collembola | none | NA | NA | PopGen | N | N | N | N | N | N | N | N | none | Re-sequencing data used as outgroup for Isotoma viridis | 20/01-2025 |
 | *Lepidocyrtus lanuginosus* | Collembola | none | NA | pooled; male + female | PopGen; Genetic Load | Y | N | N | Y | N | N | N | N | none | Possible species confusion with Lepidocyrtus lignorum. Re-sequencing data may possibly be used as outgroup for Lepidocyrtus lignorum | 20/01-2025 |
-| *Lepidocyrtus lignorum* | Collembola | [EG_LepLig_16022023_genomic_nomask_noann.fna](#lepidocyrtus-lignorum-genome-file) | pooled; male + female | EG; jepe | PopGen; Genetic Load | Y | Y | N | N | Y | N | N | N | none |  | 20/01-2025 |
+| *Lepidocyrtus lignorum* | Collembola | [EG_LepLig_16022023_genomic_nomask_noann.fna](#lepidocyrtus-lignorum-genome-file); [Stats](./assemblyStatistics/lepidocyrtusLignorum.md) | pooled; male + female | EG; jepe | PopGen; Genetic Load | Y | Y | N | N | Y | N | N | N | none |  | 20/01-2025 |
 | *Lycaena hippothoe* | Butterfly | [GCA_964264095.1.fasta](#lycaena-hippothoe-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_964264095.1/) | individual; female | Museomics; Finland | Y | NA | NA | NA | NA | NA | NA | NA | none | There seems to be an alternative confirmed reference genome available <https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_964264015.1/> | 17/01-2025 |
 | *Lycaena phlaeas* | Butterfly | [GCA_905333005.2_ilLycPhla1.2_genomic.fna](#lycaena-phlaeas-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_905333005.2/) | individual; unknown | Museomics; Finland | Y | NA | NA | NA | NA | NA | NA | NA | gbff |  | 17/01-2025 |
-| *Lycaena virgaureae* | Butterfly | [EG_LycVir_01052024_genomic_haplotype1.fna](#lycaena-virgaureae-genome-file); [EG_LycVir_01052024_genomic_haplotype2.fna](#lycaena-virgaureae-genome-file) | EG; jepe | individual; unknown | Museomics; Denmark; Finland | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER1 | genes.bed; gtf; intergenic.bed; repeats.bed | For this species both haplotype assemblies have been moved for; decision b960499. All annotation files are available for both assemblies | 17/01-2025 |
+| *Lycaena virgaureae* | Butterfly | [EG_LycVir_01052024_genomic_haplotype1.fna](#lycaena-virgaureae-genome-file); [EG_LycVir_01052024_genomic_haplotype2.fna](#lycaena-virgaureae-genome-file); [Stats](./assemblyStatistics/lycaenaVirgaureae.md) | EG; jepe | individual; unknown | Museomics; Denmark; Finland | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER1 | genes.bed; gtf; intergenic.bed; repeats.bed | For this species both haplotype assemblies have been moved for; decision b960499. All annotation files are available for both assemblies | 17/01-2025 |
 | *Maniola jurtina* | Butterfly | [GCF_905333055.1_ilManJurt1.1_genomic.fna](#maniola-jurtina-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_905333055.1/) | individual; female | Museomics; Denmark | Y | NA | NA | NA | NA | NA | NA | NA | gbff; genes.bed; gff; gtf; intergenic.bed |  | 17/01-2025 |
-| *Microlinyphia pusilla* | Spider | none | NA |  | PopGen |  | N | N | Y | N | N | N | N | none |  | 20/01-2025 |
-| *Neottiura bimaculata* | Spider | none | NA |  | PopGen; Genetic Load | Y | N | Y | N | N | N | N | N | none |  | 20/01-2025 |
-| *Oedothorac fuscus* | Spider | none | NA |  | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
-| *Orchesella cincta* | Collembola | [GCA_001718145.1_ASM171814v1_genomic.fna](#orchesella-cincta-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/) | pooled; male + female | PopGen; Genetic Load | Y | NA | NA | NA | NA | NA | NA | NA | gbff; genes.bed; gff; gtf; intergenic.bed; neutral.bed | neutral.bed should not bed here; owner b960499 | 20/01-2025 |
+| *Microlinyphia pusilla* | Spider | none | NA |  | PopGen | N | N | N | Y | N | N | N | N | none |  | 20/01-2025 |
+| *Neottiura bimaculata* | Spider | none | NA | pooled; males + females | PopGen; Genetic Load | Y | N | Y | N | N | N | N | N | none |  | 20/01-2025 |
+| *Oedothorax fuscus* | Spider | none | NA | pooled; males + females | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
+| *Orchesella cincta* | Collembola | [GCA_001718145.1_ASM171814v1_genomic.fna](#orchesella-cincta-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/) | pooled; male + female | PopGen; Genetic Load | Y | NA | NA | NA | NA | NA | NA | NA | gbff; genes.bed; gff; gtf; intergenic.bed; neutral.bed | Not assembled to chromosome level instead consists of approx 9000 scaffolds. neutral.bed should not bed here; owner b960499 | 20/01-2025 |
 | *Orchesella flavescens* | Collembola | [GCA_964034955.1_qeOrcFlav1.1_genomic.fna](#orchesella-flavescens-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_964034955.1/) | individual; unknown | PopGen | Y | NA | NA | NA | NA | NA | NA | NA | none | Don't know which specific project this is used for; owner b960499 | 20/01-2025 |
-| *Orchesella villosa* | Collembola | [EG_OrcVil_23072024_genomic.fna](#orchesella-villosa-genome-file) | EG; jepe | pooeld; male + female | PopGen; jepe | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER3 | genes.bed; gtf; intergenic.bed; neutral.bed; repeats.bed | Gene annotation was supplemented using the protein sequences of Orchesella cincta as reference; [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/). There shouldn't be a neutral.bed; owner anneaa | 20/01-2025 |
-| *Pachygnatha degeeri* | Spider | none | NA |  | PopGen; Genetic Load | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
+| *Orchesella villosa* | Collembola | [EG_OrcVil_23072024_genomic.fna](#orchesella-villosa-genome-file); [Stats](./assemblyStatistics/orchesellaVillosa.md) | EG; jepe | pooeld; male + female | PopGen; jepe | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER3 | genes.bed; gtf; intergenic.bed; neutral.bed; repeats.bed | Gene annotation was supplemented using the protein sequences of Orchesella cincta as reference; [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/). There shouldn't be a neutral.bed; owner anneaa | 20/01-2025 |
+| *Pachygnatha degeeri* | Spider | none | NA | pooled; males + females | PopGen; Genetic Load | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
 | *Parnassius mnemosyne* | Butterfly | [GCA_963668995.1_Parnassius_mnemosyne_n_2023_11_genomic.fna](#parnassius-mnemosyne-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_963668995.1/) | individual; female | Museomics; Denmark | Y | NA | NA | NA | NA | NA | NA | NA | genes.bed; gff; gtf; intergenic.bed |  | 17/01-2025 |
 | *Pieris napi* | Butterfly | [GCF_905475465.1_ilPieNapi1.2_genomic.fna](#pieris-napi-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_905475465.1/) | individual; female | Museomics; Denmark | Y | NA | NA | NA | NA | NA | NA | NA | gbff; genes.bed; gff; gtf; intergenic.bed |  | 17/01-2025 |
-| *Pisauria mirabilis* | Spider | none | NA |  | PopGen; Genetic Load | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
-| *Pogonognathellus flavescens* | Collembola | [EG_PogFla_23072024_genomic.fna](#pogonognathellus-flavescens-genome-file) | EG; jepe | pooled; male + female | PopGen; Genetic Load | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER3 | genes.bed; gtf; intergenic.bed; neutral.bed; repeats.bed | Gene annotation was supplemented using the protein sequences of Orchesella cincta as reference; [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/). There shouldn't be a neutral.bed; owner anneaa | 20/01-2025 |
+| *Pisauria mirabilis* | Spider | none | NA | pooled; males + females | PopGen; Genetic Load | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
+| *Pogonognathellus flavescens* | Collembola | [EG_PogFla_23072024_genomic.fna](#pogonognathellus-flavescens-genome-file); [Stats](./assemblyStatistics/pogonognathellusFlavescens.md) | EG; jepe | pooled; male + female | PopGen; Genetic Load | Y | Y | Y | Y | Y | Y | Y | Y; BRAKER3 | genes.bed; gtf; intergenic.bed; neutral.bed; repeats.bed | Gene annotation was supplemented using the protein sequences of Orchesella cincta as reference; [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/). There shouldn't be a neutral.bed; owner anneaa | 20/01-2025 |
 | *Sitona lineatus* | Beetle | [GCA_964263205.1.fasta](#sitona-lineatus-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_964263205.1/) | individual; unknown | PopGen; Genetic Load | Y | NA | NA | NA | NA | NA | NA | NA | none | Seems odd that there are currently no related annotation files; owner b960499 | 20/01-2025 |
 | *Stegodyphus africanus* | Spider |  |  |  | Faster X |  | Y | Y | N | N | N | N | N | gff3 |  | 20/01-2025 |
-| *Stenus fulviconis* | Beetle | none | NA |  | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
-| *Stenus impressus* | Beetle | none | NA |  | PopGen; Genetic Load | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
-| *Syntomus truncatellus* | Beetle | none | NA |  | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
-| *Tachyporus hypnorum* | Beetle | none | NA |  | PopGen; Genetic Load | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
-| *Tenuiphantes tenuis* | Spider | none | NA |  | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
-| *Tetragnatha extensa* | Spider | none | NA |  | PopGen | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
+| *Stenus fulviconis* | Beetle | none | NA | pooled; males + females | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
+| *Stenus impressus* | Beetle | none | NA | pooled; males + females | PopGen; Genetic Load | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
+| *Syntomus truncatellus* | Beetle | none | NA | pooled; males + females | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
+| *Tachyporus hypnorum* | Beetle | none | NA | pooled; males + females | PopGen; Genetic Load | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
+| *Tenuiphantes tenuis* | Spider | none | NA | pooled; males + females | PopGen; Genetic Load | Y | Y | Y | Y | N | N | N | N | none |  | 20/01-2025 |
+| *Tetragnatha extensa* | Spider | none | NA | NA | PopGen | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
 | *Thymelicus acteon* | Butterfly | [Thymelicus_acteon-GCA_951805285.1-softmasked.fa.gz](#thymelicus-acteon-genome-file) | [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_951805285.1/) | individual; male | Museomics; Denmark |  | NA | NA | NA | NA | NA | NA | NA | gtf | It's gene annotation has been used as a reference database for the annotation of *Thymelicus lineola*. Annotation folder also contains a protein sequence file | 17/01-2025 |
-| *Thymelicus lineola* | Butterfly | [EG_ThyLin_01052024_genomic.fna](#thymelicus-lineola-genome-file) | EG; jepe | individual; unknown | Museomics; Denmark; Finland | Y | Y | Y | N | Y | Y | Y | Y | genes.bed; gtf; intergenic.bed; repeats.bed | Not sure whether current annotation has been made based on Thymelicus sylvetris or Thymelicus acteon protein sequences. PacBio Hifi data and Hi-C data is available from [DToL](https://portal.darwintreeoflife.org/data/root/details/Thymelicus%20lineola) | 17/01-2025 |
-| *Trichosirocalus troglodytes* | Beetle | none | NA |  | PopGen | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
+| *Thymelicus lineola* | Butterfly | [EG_ThyLin_01052024_genomic.fna](#thymelicus-lineola-genome-file); [Stats](./assemblyStatistics/thymelicusLineola.md) | EG; jepe | individual; unknown | Museomics; Denmark; Finland | Y | Y | Y | N | Y | Y | Y | Y | genes.bed; gtf; intergenic.bed; repeats.bed | Not sure whether current annotation has been made based on Thymelicus sylvetris or Thymelicus acteon protein sequences. PacBio Hifi data and Hi-C data is available from [DToL](https://portal.darwintreeoflife.org/data/root/details/Thymelicus%20lineola) | 17/01-2025 |
+| *Trichosirocalus troglodytes* | Beetle | none | NA | NA | PopGen | Y | N | N | N | N | N | N | N | none |  | 20/01-2025 |
+
+*Pooled data for PopGen project varies in number of individuals used. For collembolans the number is between 20 and 50. For beetles and spiders the number is lower (some species of are individually sequenced, the table needs to be updated accordingly)
 
 ## Genome File Naming Convention
 
