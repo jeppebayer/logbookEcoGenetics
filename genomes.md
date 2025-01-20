@@ -95,10 +95,10 @@ Folders containing reference genomes ideally all follow the same structure, whic
 ```txt
 [species]/
 	|__annotation/
-	|		|__EG_[speciesCode]_[date]_genomic.genes.bed
-	|		|__EG_[speciesCode]_[date]_genomic.gtf
-	|		|__EG_[speciesCode]_[date]_genomic.intergenic.bed
-	|		|__EG_[speciesCode]_[date]_genomic.repeats.bed
+	|	|__EG_[speciesCode]_[date]_genomic.genes.bed
+	|	|__EG_[speciesCode]_[date]_genomic.gtf
+	|	|__EG_[speciesCode]_[date]_genomic.intergenic.bed
+	|	|__EG_[speciesCode]_[date]_genomic.repeats.bed
 	|
 	|___EG_[speciesCode]_[date]_genomic.fna
 ```
