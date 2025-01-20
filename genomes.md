@@ -94,13 +94,13 @@ Folders containing reference genomes ideally all follow the same structure, whic
 
 ```txt
 [species]/
- |__annotation/
- | |__EG_[speciesCode]_[date]_genomic.genes.bed
- | |__EG_[speciesCode]_[date]_genomic.gtf
- | |__EG_[speciesCode]_[date]_genomic.intergenic.bed
- | |__EG_[speciesCode]_[date]_genomic.repeats.bed
- |
- |___EG_[speciesCode]_[date]_genomic.fna
+    |__annotation/
+    |    |__EG_[speciesCode]_[date]_genomic.genes.bed
+    |    |__EG_[speciesCode]_[date]_genomic.gtf
+    |    |__EG_[speciesCode]_[date]_genomic.intergenic.bed
+    |    |__EG_[speciesCode]_[date]_genomic.repeats.bed
+    |
+    |___EG_[speciesCode]_[date]_genomic.fna
 ```
 
 This means no index files as these can become outdated or you can drown in the sheer number of different indexing format files. All BED files serve single purposes and are broadly applicable. There are no BED files for regions which can be debatable such as 'neutral' regions as neutral regions can be defined by varying criteria
