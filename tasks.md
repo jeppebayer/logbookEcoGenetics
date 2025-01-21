@@ -1,5 +1,6 @@
 # Tasks
 
+**Contents**
 - [Tasks](#tasks)
 	- [Population Genomics](#population-genomics)
 		- [Genome Assenbly and Annotation](#genome-assenbly-and-annotation)
@@ -10,7 +11,7 @@
 				- [*Orchesella villosa*](#orchesella-villosa)
 				- [*Pogonognathellus flavescens*](#pogonognathellus-flavescens)
 			- [Beetles](#beetles)
-				- [*Apion fulvipes*](#apion-fulvipes)
+				- [*Apion fulvipes*0](#apion-fulvipes0)
 				- [*Apion virens*](#apion-virens)
 				- [*Stenus fulvicornis*](#stenus-fulvicornis)
 				- [*Stenus impressus*](#stenus-impressus)
@@ -27,6 +28,16 @@
 		- [Alignment of Re-sequencing Data](#alignment-of-re-sequencing-data)
 		- [Variant Call Files](#variant-call-files)
 		- [Genetic Load Measures](#genetic-load-measures)
+	- [Museomics](#museomics)
+		- [Genome Assenbly and Annotation](#genome-assenbly-and-annotation-1)
+			- [*Coenonympha tullia*](#coenonympha-tullia)
+			- [*Gonepteryx rhamni*](#gonepteryx-rhamni)
+			- [*Lycaena virgaureae*](#lycaena-virgaureae)
+			- [*Thymelicus lineola*](#thymelicus-lineola)
+	- [Faster X](#faster-x)
+	- [*Enchytraeus albidus*](#enchytraeus-albidus)
+		- [Genome Assenbly and Annotation](#genome-assenbly-and-annotation-2)
+			- [*Enchytraeus albidus*](#enchytraeus-albidus-1)
 
 ## Population Genomics
 
@@ -36,51 +47,78 @@
 
 ##### *Entomobrya nicoleti*
 
-- [ ] Draft assembly
-- [ ] Hi-C scaffolding
-- [ ] Repeat masking
-- [ ] Gene annotation
+- [x] Draft assembly
+- [x] Hi-C scaffolding
+- [x] Repeat masking
+- [x] Gene annotation
+  - BRAKER2
 - [ ] Genome assembly statistics table
-- [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [x] Genome placed in reference genome folder
+- [x] GTF file
+- [x] Gene coding region BED file
+- [x] Intergenic region BED file
+- [x] Repetitive region BED file
+- [x] (Additional) Bundled debris super-scaffold BED file
+
+[Genome assembly statistics](./assemblyStatistics/entomobryaNicoleti.md)
+
+Protein reference sequences were obtained from *Orchesella cincta*, downloaded from [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/).
+Initial run with BRAKER3, using both RNA data and protein reference sequences, indicated an insufficient amount of RNA hints for gene annotation.
+Subsequently, the genome was annotated using only protein reference sequences.
 
 ##### *Isotoma viridis*
 
-- [ ] Draft assembly
-- [ ] Hi-C scaffolding
-- [ ] Repeat masking
-- [ ] Gene annotation
+- [x] Draft assembly
+- [x] Hi-C scaffolding
+- [x] Repeat masking
+- [x] Gene annotation
+  - BRAKER3
 - [ ] Genome assembly statistics table
-- [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [x] Genome placed in reference genome folder
+- [x] GTF file
+- [x] Gene coding region BED file
+- [x] Intergenic region BED file
+- [x] Repetitive region BED file
+- [x] (Additional) Bundled debris super-scaffold BED file
+
+[Genome assembly statistics](./assemblyStatistics/isotomaViridis.md)
+
+Protein reference sequences were obtained from *Orchesella cincta*, downloaded from [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/).
+Gene annotation was supplemented using the protein sequences from *Orchesella cincta* as reference.
 
 ##### *Lepidocyrtus lignorum*
 
-- [ ] Draft assembly
+- [x] Draft assembly
 - [ ] Hi-C scaffolding
 - [ ] Repeat masking
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
+
+[Genome assembly statistics](./assemblyStatistics/lepidocyrtusLignorum.md)
 
 ##### *Orchesella villosa*
 
-- [ ] Draft assembly
-- [ ] Hi-C scaffolding
-- [ ] Repeat masking
-- [ ] Gene annotation
+- [x] Draft assembly
+- [x] Hi-C scaffolding
+- [x] Repeat masking
+- [x] Gene annotation
+  - BRAKER3
 - [ ] Genome assembly statistics table
-- [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [x] Genome placed in reference genome folder
+- [x] GTF file
+- [x] Gene coding region BED file
+- [x] Intergenic region BED file
+- [x] Repetitive region BED file
+
+[Genome assembly statistics](./assemblyStatistics/orchesellaVillosa.md)
+
+Protein reference sequences were obtained from *Orchesella cincta*, downloaded from [NCBI](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_001718145.1/).
+Gene annotation was supplemented using the protein sequences from *Orchesella cincta* as reference.
 
 ##### *Pogonognathellus flavescens*
 
@@ -90,13 +128,14 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 #### Beetles
 
-##### *Apion fulvipes*
+##### *Apion fulvipes*0
 
 - [ ] Draft assembly
 - [ ] Hi-C scaffolding
@@ -104,9 +143,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Apion virens*
 
@@ -116,9 +156,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Stenus fulvicornis*
 
@@ -128,9 +169,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Stenus impressus*
 
@@ -140,9 +182,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Syntomus truncatellus*
 
@@ -152,9 +195,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Tachyporus hypnorum*
 
@@ -164,9 +208,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 #### Spiders
 
@@ -178,9 +223,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Erigone atra*
 
@@ -190,9 +236,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Neottiura bimaculata*
 
@@ -202,9 +249,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Oedethorax fuscus*
 
@@ -214,9 +262,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Pachygnatha degeeri*
 
@@ -226,9 +275,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Pisaura mirabilis*
 
@@ -238,9 +288,10 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ##### *Tenuiphantes tenuis*
 
@@ -250,12 +301,77 @@
 - [ ] Gene annotation
 - [ ] Genome assembly statistics table
 - [ ] Genome placed in reference genome folder
-- [ ] Placed gene coding region BED file
-- [ ] Placed intergenic region BED file
-- [ ] Placed repetitive region BED file
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
 
 ### Alignment of Re-sequencing Data
 
 ### Variant Call Files
 
 ### Genetic Load Measures
+
+## Museomics
+
+### Genome Assenbly and Annotation
+
+#### *Coenonympha tullia*
+
+- [ ] Draft assembly
+- [ ] Hi-C scaffolding
+- [ ] Repeat masking
+- [ ] Gene annotation
+- [ ] Genome assembly statistics table
+- [ ] Genome placed in reference genome folder
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
+
+#### *Gonepteryx rhamni*
+
+- [ ] Draft assembly
+- [ ] Hi-C scaffolding
+- [ ] Repeat masking
+- [ ] Gene annotation
+- [ ] Genome assembly statistics table
+- [ ] Genome placed in reference genome folder
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
+
+#### *Lycaena virgaureae*
+
+- [ ] Draft assembly
+- [ ] Hi-C scaffolding
+- [ ] Repeat masking
+- [ ] Gene annotation
+- [ ] Genome assembly statistics table
+- [ ] Genome placed in reference genome folder
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
+
+#### *Thymelicus lineola*
+
+- [ ] Draft assembly
+- [ ] Hi-C scaffolding
+- [ ] Repeat masking
+- [ ] Gene annotation
+- [ ] Genome assembly statistics table
+- [ ] Genome placed in reference genome folder
+- [ ] GTF file
+- [ ] Gene coding region BED file
+- [ ] Intergenic region BED file
+- [ ] Repetitive region BED file
+
+## Faster X
+
+## *Enchytraeus albidus*
+
+### Genome Assenbly and Annotation
+
+#### *Enchytraeus albidus*
